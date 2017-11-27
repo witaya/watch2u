@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Site-11-27_0157",
-    "currentPage": "page1.html",
+    "currentPage": "page5.html",
     "theme": {
       "name": "mobirise4",
       "title": "Mobirise 4",
@@ -32,7 +32,7 @@
       ]
     },
     "versionFirst": "4.3.5",
-    "uniqCompNum": 21,
+    "uniqCompNum": 22,
     "versionPublish": "4.3.5"
   },
   "pages": {
@@ -3543,39 +3543,161 @@
           "_styles": {
             "padding-top": "(@paddingTop * 15px)",
             "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
+            "background-color": "@bgColor",
+            ".mbr-slider .carousel-control": {
+              "background": "#1b1b1b"
             },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
+            ".mbr-slider .carousel-control-prev": {
+              "left": "0",
+              "margin-left": "2.5rem"
             },
-            "h4": {
-              "font-weight": "500",
-              "margin-bottom": "0",
-              "text-align": "left"
+            ".mbr-slider .carousel-control-next": {
+              "right": "0",
+              "margin-right": "2.5rem"
             },
-            "p": {
-              "color": "#767676",
-              "text-align": "left"
+            ".mbr-slider .modal-body .close": {
+              "background": "#1b1b1b"
             },
-            ".card-box": {
-              "padding-top": "2rem"
+            ".mbr-gallery-item > div::before": {
+              "content": "''",
+              "position": "absolute",
+              "left": "0",
+              "top": "0",
+              "width": "100%",
+              "height": "100%",
+              "background": "linear-gradient(to left, #554346, #45505b) !important",
+              "opacity": "0",
+              "-webkit-transition": "0.2s opacity ease-in-out",
+              "transition": "0.2s opacity ease-in-out"
             },
-            "P": {
-              "color": "#ffffff"
-            },
-            ".card-title": {
-              "color": "#ffffff"
+            ".mbr-gallery-title": {
+              "font-size": ".9em",
+              "position": "absolute",
+              "display": "block",
+              "width": "100%",
+              "bottom": "0",
+              "padding": "1rem",
+              "color": "#fff",
+              "background": "linear-gradient(to left, rgba(85, 67, 70, 0.85), rgba(69, 80, 91, 0.85)) !important",
+              "-webkit-transition": "0.2s background ease-in-out",
+              "transition": "0.2s background ease-in-out"
             }
           },
-          "_name": "features2",
-          "_customHTML": "<section class=\"features2\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\" selected>4</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/mbr-2-1620x1080.jpg\" parallax selected>\n            <input type=\"color\" title=\"Background Color\" value=\"#f9f9f9\">\n            <input type=\"video\" title=\"Background Video\" value=\"http://www.youtube.com/watch?v=uNCr7NdOJgw\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n    </div>\n    \n    <div class=\"container\">\n        <div class=\"media-container-row\">\n            <div class=\"card p-3 col-12 col-md-6\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/01.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            No Coding\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">\n                            Mobirise is an easy website builder - just drop site elements to your page, add content and style it to look the way you like. <a href=\"http://mobirise.com\">Learn more...</a>\n                        </p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/02.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box \">\n                        <h4 class=\"card-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            Mobile Friendly\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">\n                            All sites you make with Mobirise are mobile-friendly. You don't have to create a special mobile version of your site. <a href=\"http://mobirise.com\">Learn more...</a>\n                        </p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/03.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            Unique Styles\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">\n                            Mobirise offers many site blocks in several themes, and though these blocks are pre-made, they are flexible. <a href=\"http://mobirise.com\">Learn more...</a>\n                        </p>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"card p-3 col-12 col-md-6\" mbr-if=\"cardsAmount > 3\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                             'col-lg-4': cardsAmount == '3'}\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <img src=\"../_images/img/01.jpg\" alt=\"Mobirise\">\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title pb-3 mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            Unlimited Sites\n                        </h4>\n                        <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\">\n                            Mobirise gives you the freedom to develop as many websites as you like given the fact that it is a desktop app. <a href=\"http://mobirise.com\">Learn more...</a>\n                        </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
-          "_cid": "qC8v3GFi0t",
-          "_protectedParams": [],
+          "_name": "gallery1",
+          "_customHTML": "<section class=\"mbr-gallery mbr-slider-carousel\" group=\"Sliders & Gallery\" plugins=\"Masonry,BootstrapCarouselSwipe,Gallery,VimeoPlayer,SliderVideo\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\" checked>\n        <input type=\"range\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"range\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" inline>\n        <input type=\"color\" title=\"Background Color\" name=\"bgColor\" value=\"#efefef\">\n\n        <input type=\"gallery\" title=\"Gallery\" name=\"gallery\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div mbr-class=\"{'container': !fullWidth}\">\n        <div mbr-gallery=\"gallery\" mbr-gallery-spacing=\"1\" mbr-gallery-show-text></div>\n    </div>\n\n</section>",
+          "_cid": "qC8C63boFC",
+          "_protectedParams": [
+            "text_all",
+            "gallery__filtersTextStyle",
+            "gallery__filtersBtnStyle",
+            "gallery"
+          ],
           "_global": false,
           "_once": false,
-          "_params": {},
-          "_anchor": "features2-k"
+          "_params": {
+            "text_all": "All",
+            "gallery__filtersTextStyle": "display-4",
+            "gallery__filtersBtnStyle": "btn-primary-outline",
+            "gallery": [
+              {
+                "tags": "Awesome",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/seiko-solar-chronograph-limited-edition-men39s-watch-ssc473p1black-1479793161-38318101-0e6de04b124a2a7755d53b338b1d3e73-zoom-1-850x850.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/seiko-solar-chronograph-limited-edition-men39s-watch-ssc473p1black-1479793161-38318101-0e6de04b124a2a7755d53b338b1d3e73-zoom-1-850x850-800x800.jpg",
+                "alt": "",
+                "customStyle1": "display-7",
+                "caption": "SEIKO Solar Chronograph Limited Edition Men's Watch นาฬิกาข้อมือผู้ชาย สายสแตนเลสรมดำ รุ่น SSC473P1(Black)",
+                "active": false
+              },
+              {
+                "tags": "Responsive",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/seiko-solar-sport-chronograph-diver39s-200-m-men39s-watch-ssc015p1-1495962012-719949-7ab932b887b04bf3fc5df00dd6b1b1cb-zoom-850x850-850x850.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/seiko-solar-sport-chronograph-diver39s-200-m-men39s-watch-ssc015p1-1495962012-719949-7ab932b887b04bf3fc5df00dd6b1b1cb-zoom-850x850-850x850-800x800.jpg",
+                "alt": "",
+                "customStyle1": "display-7",
+                "caption": "SEIKO Solar Sport Chronograph Diver's 200 m. Men's Watch รุ่น SSC015P1 - สีเงิน/สีดำ/สีแดง&nbsp;",
+                "active": false
+              },
+              {
+                "tags": "Creative",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/seiko-neo-sport-chronograph-sks585p1-1507833869-89044555-5aa1129ad4931d6fa96a9e544931df21-zoom-850x850.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/seiko-neo-sport-chronograph-sks585p1-1507833869-89044555-5aa1129ad4931d6fa96a9e544931df21-zoom-850x850-800x800.jpg",
+                "alt": "",
+                "customStyle1": "display-7",
+                "caption": "SEIKO Neo Sport นาฬิกาข้อมือผู้ชาย Chronograph สายสแตนเลส หน้าน้ำเงิน รุ่น SKS585P1",
+                "active": false
+              },
+              {
+                "tags": "Animated",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/seiko-tachymeter-chronograph-snn079p2-1505856771-7614321-6336dabdd9c8c0b0946817f2a3a19e9e-zoom-850x850-850x850.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/seiko-tachymeter-chronograph-snn079p2-1505856771-7614321-6336dabdd9c8c0b0946817f2a3a19e9e-zoom-850x850-850x850-800x800.jpg",
+                "alt": "",
+                "customStyle1": "display-7",
+                "caption": "Seiko Tachymeter Chronograph นาฬิกาข้อมือผู้ชาย สีดำ สายผ้า รุ่น SNN079P2",
+                "active": false
+              },
+              {
+                "tags": "Awesome",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/seiko-sport-chronograph-sndd71p1-black-1505868753-589359-b724c9de5c48c6fb777aac1cadd9e49e-zoom-850x850-850x850.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/seiko-sport-chronograph-sndd71p1-black-1505868753-589359-b724c9de5c48c6fb777aac1cadd9e49e-zoom-850x850-850x850-800x800.jpg",
+                "alt": "",
+                "customStyle1": "display-7",
+                "caption": "Seiko sport chronograph นาฬิกาข้อมือผู้ชาย สายหนัง รุ่น SNDD71P1 - Black ",
+                "active": false
+              },
+              {
+                "tags": "Awesome",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/seiko-ssc595p1-premier-solar-chronograph-sapphire-men39s-watch-ssc595p1-1511375643-79624286-9b5306d1ca9f85d69528df200d11bcce-zoom-850x850.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/seiko-ssc595p1-premier-solar-chronograph-sapphire-men39s-watch-ssc595p1-1511375643-79624286-9b5306d1ca9f85d69528df200d11bcce-zoom-850x850-800x800.jpg",
+                "alt": "",
+                "customStyle1": "display-7",
+                "caption": "Seiko SSC595P1 Premier Solar Chronograph Sapphire Men's Watch",
+                "active": false
+              },
+              {
+                "tags": "Responsive",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/seiko-solar-chronograph-ssc021p1-1494538560-01666881-ff752eef4b4facffb194b542be713f81-zoom-850x850.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/seiko-solar-chronograph-ssc021p1-1494538560-01666881-ff752eef4b4facffb194b542be713f81-zoom-850x850-800x800.jpg",
+                "alt": "",
+                "customStyle1": "display-7",
+                "caption": "Seiko นาฬิกาข้อมือผู้ชาย Solar Chronograph SSC021P1 ",
+                "active": false
+              },
+              {
+                "tags": "Animated",
+                "videoPreview": "@THEME_PATH@/components/_images/gallery/preview.jpg",
+                "playVideo": false,
+                "videoUrl": "https://www.youtube.com/watch?v=fwkKc6M60-0",
+                "image": "@PROJECT_PATH@/assets/images/seiko-prospex-solar-chronograph-gmt-ssc263p1-1481027783-915187-0d2acde061942a12f6bb2a337ea16ed0-zoom-850x850.jpg",
+                "thumb": "@PROJECT_PATH@/assets/images/seiko-prospex-solar-chronograph-gmt-ssc263p1-1481027783-915187-0d2acde061942a12f6bb2a337ea16ed0-zoom-850x850-800x800.jpg",
+                "alt": "",
+                "customStyle1": "display-7",
+                "caption": "Seiko Prospex Solar Chronograph GMT นาฬิกาข้อมือผู้ชาย สายสแตนเลส รุ่น SSC263P1&nbsp;",
+                "active": true
+              }
+            ]
+          },
+          "_anchor": "gallery1-l"
         }
       ]
     }
